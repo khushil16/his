@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Heatwave Watch: Subscribe</title>
+
+    <style>
+
+        /* Subscribe container */
+
+        .vyom-subscribe-container {
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            padding: 35px;
+            border-radius: 10px;
+        }
+
+        .vyom-subscribe-container h1 {
+            color: #14213d;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .vyom-subscribe-container p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        /* Form sections */
+
+        .vyom-form-section {
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        .vyom-form-section h2 {
+            color: #14213d;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        /* Form labels */
+
+        .vyom-form-group {
+            margin-bottom: 18px;
+        }
+
+        .vyom-form-group label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        /* Input fields */
+
+        .vyom-form-group input,
+        .vyom-form-group select {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #c9ced6;
+            border-radius: 5px;
+            font-family: Georgia, serif;
+            font-size: 15px;
+        }
+
+        .vyom-form-group input:focus,
+        .vyom-form-group select:focus {
+            outline: 2px solid #14213d;
+        }
+
+        /* Buttons */
+
+        .vyom-button-group {
+            margin-top: 25px;
+        }
+
+        .vyom-button-group button {
+            padding: 11px 20px;
+            border: none;
+            border-radius: 5px;
+            font-family: Georgia, serif;
+            font-size: 15px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .vyom-submit-button {
+            background-color: #14213d;
+            color: white;
+        }
+
+        .vyom-reset-button {
+            background-color: #e8eef5;
+            color: #14213d;
+        }
+
+        .vyom-submit-button:hover {
+            background-color: #030b3d;
+        }
+
+        .vyom-reset-button:hover {
+            background-color: #d6deea;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 760px) {
+
+            .vyom-sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+
+            .vyom-sidebar a {
+                display: inline-block;
+            }
+
+            .vyom-main {
+                margin-left: 0;
+                padding: 20px;
+            }
+
+            .vyom-subscribe-container {
+                padding: 25px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>HIS</h2>
+        <a href="index.html">Dashboard</a>
+        <a href="alerts.html">Alerts</a>
+        <a href="hotspot.html">Hotspot Map</a>
+        <a href="forecast.html">Forecast Summary</a>
+        <a href="subscribe.html" class="active">Subscribe</a>
+        <a href="sources.html">Sources &amp; Stakeholders</a>
+        <a href="about.html">About</a>
+
+</div>
+
+    <div class="main">
+
+        <div class="vyom-subscribe-container">
+
+            <h1>Subscribe for Heatwave Alerts</h1>
+
+            <p>
+                Register your details to receive climate intelligence,
+                heatwave monitoring information, and early-warning alerts.
+            </p>
+
+            <form id="vyom-subscribe-form">
+
+                <div class="vyom-form-section">
+
+                    <h2>Personal Information</h2>
+
+                    <div class="vyom-form-group">
+                        <label for="userName">User Name</label>
+                        <input type="text" id="userName" placeholder="Enter your name">
+                    </div>
+
+                    <div class="vyom-form-group">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" placeholder="Enter your email">
+                    </div>
+
+                    <div class="vyom-form-group">
+                        <label for="mobile">Mobile Number</label>
+                        <input type="text" id="mobile" placeholder="Enter 10-digit mobile number">
+                    </div>
+
+                    <div class="vyom-form-group">
+                        <label for="ageGroup">Age Group</label>
+
+                        <select id="ageGroup">
+                            <option value="">Select age group</option>
+                            <option value="Below 18">Below 18</option>
+                            <option value="18-30">18-30</option>
+                            <option value="31-50">31-50</option>
+                            <option value="51-65">51-65</option>
+                            <option value="Above 65">Above 65</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="vyom-form-section">
+
+                    <h2>Location Information</h2>
+
+                    <div class="vyom-form-group">
+
+                        <label for="location">Location / City</label>
+
+                        <input
+                            type="text"
+                            id="location"
+                            placeholder="Enter your city"
+                        >
+
+                    </div>
+
+                    <div class="vyom-form-group">
+
+                        <label for="pin">PIN / Postal Code</label>
+
+                        <input
+                            type="text"
+                            id="pin"
+                            placeholder="Enter 6-digit PIN"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="vyom-form-section">
+
+                    <h2>Alert Preferences</h2>
+
+                    <div class="vyom-form-group">
+
+                        <label for="category">User Category</label>
+
+                        <select id="category">
+
+                            <option value="">Select category</option>
+                            <option value="Citizen">Citizen</option>
+                            <option value="Student">Student</option>
+                            <option value="Healthcare Worker">Healthcare Worker</option>
+                            <option value="Farmer">Farmer</option>
+                            <option value="Disaster Management">Disaster Management</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="vyom-form-group">
+
+                        <label for="channel">Preferred Alert Channel</label>
+
+                        <select id="channel">
+
+                            <option value="">Select alert channel</option>
+                            <option value="SMS">SMS</option>
+                            <option value="Email">Email</option>
+                            <option value="SMS and Email">SMS and Email</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="vyom-form-group">
+
+                        <label for="alertLevel">Heatwave Alert Level</label>
+
+                        <select id="alertLevel">
+
+                            <option value="">Select alert level</option>
+                            <option value="Watch">Watch - 37°C+</option>
+                            <option value="Heatwave">Heatwave - 40°C+</option>
+                            <option value="Severe">Severe Heatwave - 45°C+</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="vyom-form-section">
+
+                    <h2>Registration Details</h2>
+
+                    <div class="vyom-form-group">
+
+                        <label for="userId">User ID</label>
+
+                        <input
+                            type="text"
+                            id="userId"
+                            placeholder="Example: CLM-1234"
+                        >
+
+                    </div>
+
+
+                    <div class="vyom-form-group">
+
+                        <label for="registrationDate">Registration Date</label>
+
+                        <input
+                            type="date"
+                            id="registrationDate"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="vyom-button-group">
+
+                    <button
+                        type="submit"
+                        class="vyom-submit-button">
+                        Subscribe
+                    </button>
+
+                    <button
+                        type="reset"
+                        class="vyom-reset-button">
+                        Reset
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <br>
+        <hr>
+        <br>
+        <p class="footer-text" align="center">
+                Heatwave Watch | Heatwave Monitoring & Early Warning System
+        </p>
+    </div>
+
+
+    <script>
+
+        document.getElementById("vyom-subscribe-form").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let name = document.getElementById("userName").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let mobile = document.getElementById("mobile").value.trim();
+            let ageGroup = document.getElementById("ageGroup").value;
+
+            let location = document.getElementById("location").value.trim();
+            let pin = document.getElementById("pin").value.trim();
+
+            let category = document.getElementById("category").value;
+            let channel = document.getElementById("channel").value;
+            let alertLevel = document.getElementById("alertLevel").value;
+
+            let userId = document.getElementById("userId").value.trim();
+            let registrationDate = document.getElementById("registrationDate").value;
+
+
+            if (name === "") {
+                alert("Please enter your name.");
+                return;
+            }
+
+            if (!/^[A-Za-z ]+$/.test(name)) {
+                alert("Name should contain only letters.");
+                return;
+            }
+
+            if (email === "") {
+                alert("Please enter your email.");
+                return;
+            }
+
+            if (!/^[^ ]+@[^ ]+\.[a-z]{2,3}$/.test(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            if (!/^[0-9]{10}$/.test(mobile)) {
+                alert("Mobile number must contain exactly 10 digits.");
+                return;
+            }
+
+            if (ageGroup === "") {
+                alert("Please select your age group.");
+                return;
+            }
+
+            if (location === "") {
+                alert("Please enter your location.");
+                return;
+            }
+
+            if (!/^[0-9]{6}$/.test(pin)) {
+                alert("PIN code must contain exactly 6 digits.");
+                return;
+            }
+
+            if (category === "") {
+                alert("Please select your user category.");
+                return;
+            }
+
+            if (channel === "") {
+                alert("Please select your preferred alert channel.");
+                return;
+            }
+
+            if (alertLevel === "") {
+                alert("Please select a heatwave alert level.");
+                return;
+            }
+
+            if (!/^CLM-[0-9]{4}$/.test(userId)) {
+                alert("User ID must be in the format CLM-1234.");
+                return;
+            }
+
+            if (registrationDate === "") {
+                alert("Please select the registration date.");
+                return;
+            }
+
+            let today = new Date().toISOString().split("T")[0];
+
+            if (registrationDate > today) {
+                alert("Registration date cannot be a future date.");
+                return;
+            }
+
+            alert(
+                "Registration Successful!\n\n" +
+                "You are registered for Climate Intelligence " +
+                "Heatwave Monitoring and Early-Warning Alerts."
+            );
+
+            document.getElementById("vyom-subscribe-form").reset();
+
+        });
+
+    </script>
+
+    
+
+</body>
+</html>

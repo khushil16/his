@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HIS: Forecast Summary</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .forecast-container {
+            max-width: 12000px;
+            margin: 0 auto;
+            padding-bottom: 50px;
+        }
+
+        .forecast-intro {
+            margin-bottom: 35px;
+            font-size: 1rem;
+        }
+
+        .forecast-label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--ink);
+        }
+
+        .forecast-select {
+            display: block;
+            width: 100%;
+            max-width: 350px;
+            padding: 12px 14px;
+            margin-bottom: 6px;
+            border: 2px solid #14213d;
+            border-radius: 5px;
+            background-color: white;
+            color: var(--ink);
+            font-size: 1rem;
+        }
+
+
+        .forecast-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 30px 0 35px;
+            padding: 18px 20px;
+            background-color: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 6px;
+        }
+
+        .forecast-grid {
+            margin-bottom: 50px;
+        }
+
+        .forecast-container h2 {
+            margin-top: 2px;
+            margin-bottom: 20px;
+        }
+
+        .forecast-summary {
+            min-height: 45px;
+            padding: 7px;
+            background-color: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+
+        .forecast-summary p {
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="sidebar">
+
+        <h2>HIS</h2>
+
+        <a href="index.html">Dashboard</a>
+        <a href="alerts.html">Alerts</a>
+        <a href="hotspot.html">Hotspot Map</a>
+        <a href="forecast.html" class="active">Forecast Summary</a>
+        <a href="subscribe.html">Subscribe</a>
+        <a href="sources.html">Sources &amp; Stakeholders</a>
+        <a href="about.html">About</a>
+
+    </div>
+
+
+    <div class="main">
+
+        <div class="forecast-container">
+
+            <h1>Forecast Summary</h1>
+
+            <p class="forecast-intro">
+                7 day forecasts for the selected regions
+            </p>
+
+
+            <!-- Region picker -->
+            <label
+                class="forecast-label"
+                for="region-select">
+                Select Region
+            </label>
+
+            <select
+                id="region-select"
+                class="forecast-select">
+            </select>
+
+            <p
+                id="region-covers"
+                class="forecast-covers">
+            </p>
+
+
+            <!-- Legend -->
+            <div class="forecast-legend">
+
+                <span class="forecast-pill level-normal">
+                    Normal
+                </span>
+
+                <span class="forecast-pill level-watch">
+                    Watch
+                </span>
+
+                <span class="forecast-pill level-warning">
+                    Warning
+                </span>
+
+                <span class="forecast-pill level-severe">
+                    Severe
+                </span>
+
+            </div>
+
+
+            <!-- Day cards -->
+            <div
+                id="forecast-grid"
+                class="forecast-grid"
+                aria-live="polite">
+            </div>
+
+
+            <!-- Summary -->
+            <h2>Summary</h2>
+
+            <div
+                id="forecast-summary"
+                class="forecast-summary"
+                aria-live="polite">
+            </div>
+
+        </div>
+
+        <hr>
+        <br>
+        <p class="alerts-footer">
+            Heatwave Watch | Heatwave Monitoring &amp; Early Warning System
+        </p>
+    </div>
+
+
+    <script src="forecast.js"></script>
+
+</body>
+
+</html>

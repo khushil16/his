@@ -1,0 +1,409 @@
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+    background-color: #14213d;
+    padding: 50px 15px;
+    box-shadow: 5px 0 20px rgba(20, 33, 61, 0.25);
+    border-radius: 0 10px 10px 0;
+    overflow: hidden;
+}
+
+/* Menu heading */
+.sidebar h2 {
+    color: #f5f7fa;
+    margin-bottom: 25px;
+    padding-left: 10px;
+    font-size: 40px;
+}
+
+/* Menu options */
+.sidebar a {
+    display: block;
+    color: #e8edf5;
+    text-decoration: none;
+    padding: 13px 12px;
+    margin: 7px 0;
+    border-radius: 8px;
+    transition: 
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.2s ease;
+}
+
+/* Hover effect */
+.sidebar a:hover {
+    background-color: rgba(136, 177, 212, 0.35);
+    color: white;
+    transform: translateX(5px);
+}
+
+/* Currently selected option */
+.sidebar a.active {
+    background-color: rgba(136, 177, 212, 0.55);
+    color: white;
+}
+.main {
+    color: #14231d;
+    background-color: aliceblue;
+    font-family: Georgia, serif;
+    margin-left: 250px;
+    padding: 25px;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    padding: 35px;
+    border-radius: 10px;
+}
+
+/* Main heading */
+.about-container h1 {
+    color: #14213d;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Section headings */
+.about-container h2 {
+    color: #14213d;
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* Paragraphs */
+.about-container p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Lists */
+.about-container ul,
+.about-container ol {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.about-container li {
+    margin-bottom: 8px;
+}
+
+/* Code */
+.about-container code {
+    background-color: #e8eef5;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-family: Consolas, monospace;
+}
+
+/* Muted text */
+.about-muted {
+    color: #666;
+    font-style: italic;
+}
+
+.data-note {
+    margin-top: 25px;
+    border-left: 3px solid #64748b;
+    padding-left: 12px;
+}
+
+.data-note p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* =========================================================
+   Forecast Summary page
+   Paste this block at the bottom of style.css.
+   Every class starts with "forecast-" or "level-" so it
+   will not affect any of your other pages.
+   ========================================================= */
+
+.forecast-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Page heading */
+.forecast-container h1 {
+    color: #14213d;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+/* "Summary" heading */
+.forecast-container h2 {
+    color: #14213d;
+    font-size: 22px;
+    margin-top: 35px;
+    margin-bottom: 12px;
+}
+
+/* Small grey line under the heading */
+.forecast-intro {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+/* Region dropdown */
+.forecast-label {
+    display: block;
+    color: #14213d;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.forecast-select {
+    font-family: Georgia, serif;
+    font-size: 15px;
+    color: #14213d;
+    background-color: white;
+    border: 2px solid #14213d;
+    border-radius: 8px;
+    padding: 9px 12px;
+    min-width: 260px;
+    max-width: 100%;
+    cursor: pointer;
+}
+
+.forecast-select:focus {
+    outline: 3px solid rgba(136, 177, 212, 0.75);
+    outline-offset: 2px;
+}
+
+/* "Covers: ..." line */
+.forecast-covers {
+    color: #666;
+    font-size: 13px;
+    margin: 10px 0 14px;
+}
+
+/* Legend row */
+.forecast-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+/* Coloured status pill (used in the legend and on each card) */
+.forecast-pill {
+    display: inline-block;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 11px;
+    border-radius: 999px;
+}
+
+.level-normal   { background-color: #2e7d4f; }
+.level-watch    { background-color: #b38f00; }
+.level-warning  { background-color: #d9650b; }
+.level-severe   { background-color: #c1121f; }
+
+/* Day cards */
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.forecast-card {
+    background-color: white;
+    border: 1px solid #d9e2ec;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.forecast-day {
+    color: #666;
+    font-size: 13px;
+    margin: 0 0 8px;
+}
+
+.forecast-temp {
+    color: #14213d;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+/* Summary box */
+.forecast-summary {
+    background-color: white;
+    border: 1px solid #d9e2ec;
+    border-radius: 10px;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.forecast-summary p {
+    margin: 0 0 12px;
+}
+
+.forecast-summary p:last-child {
+    margin-bottom: 0;
+}
+
+.forecast-summary a {
+    color: #14213d;
+}
+
+/* Narrower screens: 2 cards per row instead of 4 */
+@media (max-width: 900px) {
+    .forecast-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =========================================================
+   Alerts page
+   Paste this block at the bottom of style.css.
+   (If you already pasted the earlier "Alerts page" block,
+   delete that one and use this instead.)
+   Every class starts with "alerts-" so it will not affect
+   any of your other pages.
+   ========================================================= */
+
+/* Row of cards: 4 across, like the dashboard */
+.alerts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* White card (same look as the dashboard cards) */
+.alerts-card {
+    background-color: white;
+    border: 1px solid #d9dde4;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.alerts-card h3 {
+    color: #14213d;
+    font-size: 19px;
+    margin: 0 0 12px;
+}
+
+.alerts-card p {
+    color: #5a6475;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 12px;
+}
+
+.alerts-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* Links inside cards: blue and bold, like "Access Regional Forecast Table" */
+.alerts-card a {
+    color: #0b4f9c;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.alerts-card a:hover {
+    text-decoration: underline;
+}
+
+/* Space between a badge and the text that follows it */
+.alerts-card .badge + h3,
+.alerts-card .badge + p {
+    margin-top: 14px;
+}
+
+/* Small capital label, like "MAX SURFACE TEMP" on the dashboard */
+.alerts-card .alerts-label {
+    color: #5a6475;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+/* Big temperature number */
+.alerts-card .alerts-temp {
+    color: #14213d;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+/* Safety advice list */
+.alerts-list {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.alerts-list li {
+    color: #5a6475;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.alerts-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Footer line at the bottom of the page */
+.alerts-footer {
+    text-align: center;
+    margin: 0;
+    padding: 10px 0 20px;
+}
+
+/* Narrower screens: fewer cards per row */
+@media (max-width: 1100px) {
+    .alerts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .alerts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   Alert level colour coding  (NEW - add this part)
+   l0 = Normal, l1 = Watch, l2 = Warning, l3 = Severe
+   --------------------------------------------------------- */
+
+/* Coloured pill */
+.alerts-card .badge {
+    display: inline-block;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 3px 12px;
+    border-radius: 999px;
+}
+
+.alerts-card .badge.l0 { background-color: #2e7d4f; }
+.alerts-card .badge.l1 { background-color: #b38f00; }
+.alerts-card .badge.l2 { background-color: #d9650b; }
+.alerts-card .badge.l3 { background-color: #c1121f; }
+
+/* Coloured strip along the top of a card */
+.alerts-card.alerts-l0 { border-top: 4px solid #2e7d4f; }
+.alerts-card.alerts-l1 { border-top: 4px solid #b38f00; }
+.alerts-card.alerts-l2 { border-top: 4px solid #d9650b; }
+.alerts-card.alerts-l3 { border-top: 4px solid #c1121f; }
